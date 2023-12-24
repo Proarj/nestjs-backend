@@ -1,4 +1,4 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Get, Post } from '@nestjs/common';
 import { ApiService } from './api.service';
 import { UserInput } from './payloads/user-input.model';
 import { FilterDataRequest } from './payloads/filter-data.model';
@@ -7,7 +7,10 @@ import { AggregateDataRequest } from './payloads/aggregate-data.model';
 @Controller('api')
 export class ApiController {
   constructor(private apiService: ApiService) {}
-
+  @Get()
+  getApiEndpoint(): string {
+    return 'This is the /api endpoint!';
+  }
   // Endpoint for logging model response to OpenAI and storing in Clickhouse
   @Post('/logData')
   logModelResponse(@Body() data: UserInput) {
