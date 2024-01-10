@@ -8,11 +8,11 @@ export class ClickhouseService {
   constructor() {
     // Initialize ClickHouse connection with credentials and URL
     this.clickhouse = new ClickHouse({
-      url: 'https://z8okmq000t.asia-southeast1.gcp.clickhouse.cloud:8443',
-      port: 8843,
+      url: 'https://jzfvreutov.asia-southeast1.gcp.clickhouse.cloud:8443',
+      port: 8443,
       basicAuth: {
         username: 'default',
-        password: 'H22_G72X1jV7h',
+        password: '4~2KVquUn_TJZ',
       },
     });
   }
